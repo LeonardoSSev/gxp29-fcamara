@@ -36,8 +36,8 @@
             <div class="col-lg-4">
                 <div>
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <input class="form-control mr-sm-2" onchange="incredibleSearch(event);" type="search" placeholder="Search" aria-label="Search">
+                        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
                     </form>
                 </div>
             </div>
@@ -47,27 +47,12 @@
                 <div class="row principal-post">
                     <img src="https://picsum.photos/796/416" class="img-fluid" alt="Responsive image">
                     <div id="principal-new" class="principa-description">
-                        <h1>Noticia Principal</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusantium adipisci aut neque
-                            quo.
-                            Repellendus fugit quibusdam, atque dolorem omnis minus sed. Minima, cum corporis adipisci
-                            magnam
-                            minus delectus iusto.
-                            Nulla facere nobis recusandae sed voluptatum similique facilis corporis porro vero ipsum
-                            fugiat
-                            ipsam provident quas, magnam cumque et nemo! Dolorem similique illo quis consequuntur
-                            architecto
-                            minima veniam fugit animi.
-                            Similique nemo vitae corrupti odit voluptates perspiciatis, nobis earum blanditiis ex eius
-                            nulla
-                            sapiente dignissimos eligendi reiciendis et itaque aut, quae aspernatur! Sunt porro,
-                            accusantium
-                            deleniti alias laborum exercitationem natus!
-                        </p>
+                        <h1>Carregando...</h1>
+                        <p>Carregando...</p>
                     </div>
                 </div>
-                <div class="row mt-4">
-                    <div class="col-md-6 mb-4">
+                <div id="other-cards" class="row mt-4">
+                    <!-- <div class="col-md-6 mb-4">
                         <div class="card" style="width: 18rem; padding: 16px;">
                             <img src="https://picsum.photos/358/245" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -78,43 +63,7 @@
                                 <a href="#" class="primary">Continuar lendo...</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card" style="width: 18rem; padding: 16px;">
-                            <img src="https://picsum.photos/358/245" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="primary">Continuar lendo...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card" style="width: 18rem; padding: 16px;">
-                            <img src="https://picsum.photos/358/245" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="primary">Continuar lendo...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card" style="width: 18rem; padding: 16px;">
-                            <img src="https://picsum.photos/358/245" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="primary">Continuar lendo...</a>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-4">
@@ -145,7 +94,7 @@
                     iure ad veniam illum quos? Cumque necessitatibus vel architecto ullam libero omnis minus, vero
                     distinctio quaerat.
                 </div>
-                <div class="mt-4 editors-choice" style="padding: 20px;">
+                <div class="mt-4 editors-choice" style="padding: 20px; display: none;">
                     <h1>Escolha dos Editores</h1>
                     <ul class="editors-list">
                         <li class="mt-4">
