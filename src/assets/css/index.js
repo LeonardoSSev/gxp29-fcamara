@@ -47,7 +47,7 @@ function populaBlog(result){
     imgPrinc.src = 'https://picsum.photos/796/416';
     imgPrinc.className = 'img-fluid to-remove';
     imgPrinc.alt = 'Responsive image';
-    //append no container
+    //append no container 
     containerPrincipal.appendChild(imgPrinc);
     //h1 principal
     let h1Princ = document.createElement('h1');
