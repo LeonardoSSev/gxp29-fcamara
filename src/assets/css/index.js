@@ -20,13 +20,52 @@ function getPosts(){
     })
 }
 
-function populaBlog(result){
-    //Aqui cria o post principal, que eu imagina que seja o último postado
-    let containerPrincipal = document.getElementById('principal-new');
-    containerPrincipal.getElementsByTagName('h1')[0].innerText = result[result.length - 1].titulo;
-    containerPrincipal.getElementsByTagName('p')[0].innerText = result[result.length - 1].corpo.substring(0, 200);
+function limpaFeed(){
+    //limpa principal
+    let divPrincip = document.getElementById('principal-new')
+    let listelems = divPrincip.getElementsByClassName('to-remove')
 
-    //Aqui popula o restante dos cards com os posts restantes
+    while (listelems.length > 0) {
+        divPrincip.removeChild(listelems.item(0));
+    }
+    
+    //limpa restante
+     let otherCards = document.getElementById('other-cards');
+     let listCards = otherCards.getElementsByClassName('to-remove')
+
+    while (listCards.length > 0) {
+        otherCards.removeChild(listCards.item(0));
+    }
+}
+
+function populaBlog(result){
+
+    //Aqui cria o post principal, que eu imagina que seja o último postado --------------------
+    let containerPrincipal = document.getElementById('principal-new');
+    //imagem principal
+    let imgPrinc = document.createElement('img');
+    imgPrinc.src = 'https://picsum.photos/796/416';
+    imgPrinc.className = 'img-fluid to-remove';
+    imgPrinc.alt = 'Responsive image';
+    //append no container
+    containerPrincipal.appendChild(imgPrinc);
+    //h1 principal
+    let h1Princ = document.createElement('h1');
+    h1Princ.innerText = result[result.length - 1].titulo;
+    //p principal
+    let pPrinc = document.createElement('p');
+    pPrinc.innerText = result[result.length - 1].corpo.substring(0, 200);
+    //div
+    let divPrinc = document.createElement('div');
+    divPrinc.className = 'principa-description to-remove';
+    //append do h1 e p na div
+    divPrinc.appendChild(h1Princ);
+    divPrinc.appendChild(pPrinc);
+    //append do div no container
+    containerPrincipal.appendChild(divPrinc);
+    
+
+    //Aqui popula o restante dos cards com os posts restantes --------------------
     let otherCards = document.getElementById('other-cards');
 
     result.slice(0, result.length - 1).reverse().forEach(element => {
@@ -65,7 +104,7 @@ function populaBlog(result){
         div2.appendChild(div1);
         //div3
         let div3 = document.createElement('div');
-        div3.className = 'col-md-6 mb-4';
+        div3.className = 'col-md-6 mb-4 to-remove';
         div3.appendChild(div2);
 
         otherCards.appendChild(div3)
@@ -73,9 +112,31 @@ function populaBlog(result){
 }
 
 function incredibleSearch(event){
-    //Corrigir
+    console.log(event.target.value);
     let searched = arrPosts.filter((post) => {
-        return post.titulo.includes(event);
+        return post.titulo.includes(event.target.value);
     });
+    console.log(searched);
+    limpaFeed();
+
+   if(searched.length > 0){
     populaBlog(searched);
+   }
+}
+
+function trocaCategoria(event){
+    let clicked = event.target.innerText;
+
+    limpaFeed();
+
+    let listResultCategoria = arrPosts.filter((post) => {
+        return post.keyWord === clicked;
+    })
+
+    console.log(listResultCategoria);
+
+    if(listResultCategoria.length > 0){
+        populaBlog(listResultCategoria)
+    }
+    
 }
