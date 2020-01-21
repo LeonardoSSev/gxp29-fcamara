@@ -135,3 +135,14 @@ table {
 .editors-list label {
 	padding: 4px;
 }
+
+.blog-register-news {
+	background: #ffff;
+	border: 2px dotted tomato;
+    padding: 23px 0 46px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    z-index: 1;
+}
