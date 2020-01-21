@@ -1,0 +1,137 @@
+
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} */
+
+
+#body {
+    background-color: #f55 !important;
+}
+
+.categories {
+    padding: 10px;
+    margin:0px;
+    list-style:none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories li {
+    display: inline;
+}
+
+.principal-post {
+	background-color: #fff;
+}
+
+.principa-description {
+	padding: 30px;
+}
+
+.principal-post p {
+	color: rgb(51, 71, 91);
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.principal-post h1 {
+	color: rgb(51, 71, 91);
+	font-size: 30px;
+}
+
+.subscribe-card {
+	width: 260px;
+	padding: 24px;
+}
+
+.post-title {
+}
+
+.post {
+	
+}
+
+.banner-column {
+	width: 260px;
+	height: 600px;
+	border: 2px solid rgb(51, 71, 91);
+	padding: 14px;
+}
+
+.editors-choice {
+
+}
+
+.editors-choice h1 {
+	font-weight: 600;
+	color: rgb(51, 71, 91);
+	font-size: 20px;
+}
+
+.editors-choice h1::after {
+	content: '';
+	display: block;
+	width: 46px;
+	height: 5px;
+	background-color: rgb(0, 133, 255);
+}
+
+.editors-list {
+	margin-top: 40px;
+	padding: 0;
+}
+
+.editors-list img {
+	border-radius: 50%;
+}
+
+.editors-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.editors-list label {
+	padding: 4px;
+}
