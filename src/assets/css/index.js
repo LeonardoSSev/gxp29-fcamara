@@ -40,6 +40,9 @@ function limpaFeed(){
 
 function populaBlog(result){
 
+    console.log(result);
+    console.log(result[0]._id);
+
     //Aqui cria o post principal, que eu imagina que seja o último postado --------------------
     let containerPrincipal = document.getElementById('principal-new');
     //imagem principal
@@ -58,9 +61,16 @@ function populaBlog(result){
     //div
     let divPrinc = document.createElement('div');
     divPrinc.className = 'principa-description to-remove';
-    //append do h1 e p na div
+    //a
+    let aPrinc = document.createElement('a');
+    aPrinc.href = '#';
+    aPrinc.className = 'primary';
+    aPrinc.id = result[result.length - 1]._id;
+    aPrinc.innerText = 'Continuar Lendo...'
+    //append do h1 e p na div 
     divPrinc.appendChild(h1Princ);
     divPrinc.appendChild(pPrinc);
+    divPrinc.appendChild(aPrinc);
     //append do div no container
     containerPrincipal.appendChild(divPrinc);
     
@@ -81,7 +91,7 @@ function populaBlog(result){
         let a = document.createElement('a');
         a.href = '#';
         a.className = 'primary';
-        a.id = result._id;
+        a.id = element._id;
         a.innerText = 'Continuar Lendo...'
         //div1
         let div1 = document.createElement('div');
