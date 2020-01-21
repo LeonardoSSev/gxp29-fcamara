@@ -24,32 +24,31 @@
             <div class="col-lg-8">
                 <nav class="navbar navbar-expand-lg navbar-light bg-transparent"
                     style="display: flex; justify-content: space-between;">
-                    <ul class="categories col-8">
-                        <li>Categoria 1</li>
-                        <li>Categoria 2</li>
-                        <li>Categoria 3</li>
-                        <li>Categoria 4</li>
-                        <li>Categoria 5</li>
+                    <ul class="categories col-12">
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Inovação</button></li>
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Auditoria</button></li>
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Ágil</button></li>
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Frameworks</button></li>
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Projetos</button></li>
                     </ul>
                 </nav>
             </div>
             <div class="col-lg-4">
                 <div>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" onchange="incredibleSearch(event);" type="search" placeholder="Search" aria-label="Search">
-                        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                    <form class="form-inline my-3 my-lg1">
+                        <input class="form-control" onkeyup="incredibleSearch(event);" type="search" placeholder="Search" aria-label="Search">
                     </form>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-8">
-                <div class="row principal-post">
-                    <img src="https://picsum.photos/796/416" class="img-fluid" alt="Responsive image">
-                    <div id="principal-new" class="principa-description">
+                <div id="principal-new" class="row principal-post">
+                    <!-- <img src="https://picsum.photos/796/416" class="img-fluid" alt="Responsive image">
+                    <div class="principa-description">
                         <h1>Carregando...</h1>
                         <p>Carregando...</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div id="other-cards" class="row mt-4">
                     <!-- <div class="col-md-6 mb-4">
