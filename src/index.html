@@ -70,16 +70,31 @@
                     <h5>Inscreva-se em nossa newsletter</h5>
                     <form method="POST" action="https://smtl.gama.academy/leads/3d8521c0-39f4-11ea-a319-e90cfbc180ef" class="px-4 py-3">
                         <div class="form-group">
-                            <label for="exampleDropdownFormEmail1">*Nome:</label>
-                            <input type="email" class="form-control bg-light" id="exampleDropdownFormEmail1">
+                            <label for="inputName">*Nome:</label>
+                            <input 
+                                name="name" 
+                                type="text" 
+                                pattern="^\D{2,}\s[\D\s]{2,}$" 
+                                title="Digite seu nome completo"
+                                class="form-control bg-light"
+                                id="inputName"
+                                required
+                            />
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="exampleDropdownFormEmail1">*Sobrenome:</label>
                             <input type="email" class="form-control bg-light" id="exampleDropdownFormEmail1">
-                        </div>
+                        </div> -->
                         <div class="form-group">
-                            <label for="exampleDropdownFormEmail1">*Seu melhor e-mail:</label>
-                            <input type="email" class="form-control bg-light" id="exampleDropdownFormEmail1">
+                            <label for="inputEmail">*Seu melhor e-mail:</label>
+                            <input 
+                                name="email"
+                                type="email"
+                                class="form-control bg-light"
+                                title="Digite seu melhor email"
+                                id="inputEmail"
+                                required
+                            />
                         </div>
                         <button type="submit" class="btn btn-register">Assinar newsletter</button>
                         <div class="mt-3">
@@ -156,12 +171,25 @@
                             <h1>Inscreva-se em nossa newsletter</h1>
                             <p>Fique por dentro das notícias mais recentes sobre  tecnologia, gestão e carreiras.</p>
                             <div class="mr-2 col">
-                                <label for="exampleDropdownFormEmail1">Nome Completo:</label>
-                                <input type="email" class="form-control bg-light" id="exampleDropdownFormEmail1">
+                                <label for="inputCompletName">Nome Completo:</label>
+                                <input 
+                                    name="name"
+                                    pattern="^\D{2,}\s[\D\s]{2,}$"
+                                    title="Digite seu nome completo"
+                                    type="text"
+                                    class="form-control bg-light"
+                                    id="inputCompletName" 
+                                    required
+                                />
                             </div>
                             <div class="mr-2 col">
-                                <label for="exampleDropdownFormEmail1">Seu melhor email:</label>
-                                <input type="email" class="form-control bg-light" id="exampleDropdownFormEmail1">
+                                <label for="inputEmail">Seu melhor email:</label>
+                                <input 
+                                    type="email"
+                                    class="form-control bg-light"
+                                    title="Digite seu melhor email"
+                                    id="inputEmail" 
+                                />
                             </div>
                             <div class="mr-2 col align-self-end">
                                 <button type="submit" class="btn btn-register">Assinar newsletter</button>
