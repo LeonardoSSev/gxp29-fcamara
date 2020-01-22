@@ -41,10 +41,10 @@ function populaBlog(post){
     containerPrincipal.appendChild(imgPrinc);
     //h1 principal
     let h1Princ = document.createElement('h1');
-    h1Princ.innerText = post.titulo;
+    h1Princ.innerHTML = post.titulo;
     //p principal
     let pPrinc = document.createElement('p');
-    pPrinc.innerText = post.corpo;
+    pPrinc.innerHTML = post.corpo;
     //div
     let divPrinc = document.createElement('div');
     divPrinc.className = 'principa-description to-remove';

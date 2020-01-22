@@ -54,9 +54,11 @@ function populaBlog(result){
     h1Princ.innerText = result[result.length - 1].titulo;
     //p principal
     let pPrinc = document.createElement('p');
+    pPrinc.style = 'width: 100%; word-break: break-all;'
     pPrinc.innerText = result[result.length - 1].corpo.substring(0, 200) + '...';
     //div
     let divPrinc = document.createElement('div');
+    divPrinc.style = 'width: 100%;'
     divPrinc.className = 'principa-description to-remove';
     //a
     let aPrinc = document.createElement('a');
