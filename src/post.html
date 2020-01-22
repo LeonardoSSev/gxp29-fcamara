@@ -12,7 +12,7 @@
     <title>Grow In Tech - Blog</title>
 </head>
 
-<body onload="getPosts();" style="background-color: #f5f5f5;">
+<body onload="RecuperPostagem();" style="background-color: #f5f5f5;">
     <header class="hero-bgi">
         <div class="hero-text">
             <!-- <img src="assets/css/imgs/logo-white.svg" class="img-fluid" alt="Responsive image"> -->
@@ -22,22 +22,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <nav class="navbar navbar-expand-lg navbar-light bg-transparent"
-                    style="display: flex; justify-content: space-between;">
-                    <ul class="categories col-12">
-                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Inovação</button></li>
-                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Auditoria</button></li>
-                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Ágil</button></li>
-                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Frameworks</button></li>
-                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Projetos</button></li>
-                    </ul>
-                </nav>
+                <ul class="categories col-12">
+                    <li><button onclick="voltar();" type="button" class="btn btn-light">Voltar</button></li>
+                </ul>
             </div>
             <div class="col-lg-4">
                 <div>
-                    <form class="form-inline my-3 my-lg1">
-                        <input class="form-control" onkeyup="incredibleSearch(event);" type="search" placeholder="Search" aria-label="Search">
-                    </form>
+                    <br>
+                    <!--Tinha um search aqui-->
                 </div>
             </div>
         </div>
@@ -48,20 +40,6 @@
                     <div class="principa-description">
                         <h1>Carregando...</h1>
                         <p>Carregando...</p>
-                    </div> -->
-                </div>
-                <div id="other-cards" class="row mt-4">
-                    <!-- <div class="col-md-6 mb-4">
-                        <div class="card" style="width: 18rem; padding: 16px;">
-                            <img src="https://picsum.photos/358/245" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="primary">Continuar lendo...</a>
-                            </div>
-                        </div>
                     </div> -->
                 </div>
             </div>
@@ -211,5 +189,5 @@
         aperiam
     </footer>
 </body>
-<script src="assets/index.js"></script>
+<script src="assets/post.js"></script>
 </html>

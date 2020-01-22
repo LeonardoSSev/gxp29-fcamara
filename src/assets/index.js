@@ -40,9 +40,6 @@ function limpaFeed(){
 
 function populaBlog(result){
 
-    console.log(result);
-    console.log(result[0]._id);
-
     //Aqui cria o post principal, que eu imagina que seja o último postado --------------------
     let containerPrincipal = document.getElementById('principal-new');
     //imagem principal
@@ -57,13 +54,13 @@ function populaBlog(result){
     h1Princ.innerText = result[result.length - 1].titulo;
     //p principal
     let pPrinc = document.createElement('p');
-    pPrinc.innerText = result[result.length - 1].corpo.substring(0, 200);
+    pPrinc.innerText = result[result.length - 1].corpo.substring(0, 200) + '...';
     //div
     let divPrinc = document.createElement('div');
     divPrinc.className = 'principa-description to-remove';
     //a
     let aPrinc = document.createElement('a');
-    aPrinc.href = '#';
+    aPrinc.href = 'post.html?tkn=' + result[result.length - 1]._id;
     aPrinc.className = 'primary';
     aPrinc.id = result[result.length - 1]._id;
     aPrinc.innerText = 'Continuar Lendo...'
@@ -82,18 +79,18 @@ function populaBlog(result){
         //p
         let p = document.createElement('p');
         p.className = 'card-text';
-        p.innerText = element.corpo.substring(0, 100);
+        p.innerText = element.corpo.substring(0, 100) + '...';
         //h5
         let h5 = document.createElement('h5');
         h5.className = 'card-title';
         h5.innerText = element.titulo.substring(0, 100);
         //a
         let a = document.createElement('a');
-        a.href = '#';
+        a.href = 'post.html?tkn=' + element._id;
         a.className = 'primary';
         a.id = element._id;
         a.innerText = 'Continuar Lendo...'
-        //div1
+        //div1 
         let div1 = document.createElement('div');
         div1.className = 'card-body'
         //append nos childs
