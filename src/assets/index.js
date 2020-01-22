@@ -55,7 +55,7 @@ function populaBlog(result){
     //p principal
     let pPrinc = document.createElement('p');
     pPrinc.style = 'width: 100%; word-break: break-all;'
-    pPrinc.innerText = result[result.length - 1].corpo.substring(0, 200) + '...';
+    pPrinc.innerHTML = result[result.length - 1].corpo.substring(0, 200) + '...';
     //div
     let divPrinc = document.createElement('div');
     divPrinc.style = 'width: 100%;'
@@ -85,7 +85,7 @@ function populaBlog(result){
         //h5
         let h5 = document.createElement('h5');
         h5.className = 'card-title';
-        h5.innerText = element.titulo.substring(0, 100);
+        h5.innerHTML = element.titulo.substring(0, 100);
         //a
         let a = document.createElement('a');
         a.href = 'post.html?tkn=' + element._id;
