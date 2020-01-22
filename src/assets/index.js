@@ -44,7 +44,7 @@ function populaBlog(result){
     let containerPrincipal = document.getElementById('principal-new');
     //imagem principal
     let imgPrinc = document.createElement('img');
-    imgPrinc.src = 'https://picsum.photos/796/416';
+    imgPrinc.src = result[result.length - 1].imgSrc;
     imgPrinc.className = 'img-fluid to-remove';
     imgPrinc.alt = 'Responsive image';
     //append no container 
@@ -101,7 +101,7 @@ function populaBlog(result){
         div1.appendChild(a);
         //img
         let img = document.createElement('img');
-        img.src = 'https://picsum.photos/358/245';
+        img.src = element.imgSrc;
         img.className = 'card-img-top';
         img.alt = '...';
         //div 2
