@@ -42,6 +42,8 @@ function populaBlog(result){
 
     //Aqui cria o post principal, que eu imagina que seja o último postado --------------------
     let containerPrincipal = document.getElementById('principal-new');
+    //deixa escondido
+    containerPrincipal.style.opacity = 0;
     //imagem principal
     let imgPrinc = document.createElement('img');
     imgPrinc.src = result[result.length - 1].imgSrc;
@@ -76,6 +78,9 @@ function populaBlog(result){
 
     //Aqui popula o restante dos cards com os posts restantes --------------------
     let otherCards = document.getElementById('other-cards');
+
+    //deixa escondido
+    otherCards.style.opacity = 0;
 
     result.slice(0, result.length - 1).reverse().forEach(element => {
         //p
@@ -118,6 +123,14 @@ function populaBlog(result){
 
         otherCards.appendChild(div3)
     });
+
+    //Esconde loading
+    document.getElementById('loading-gif').style.display = 'none';
+
+    //mostra os elementos
+    containerPrincipal.style.opacity = 1;
+    otherCards.style.opacity = 1;
+
 }
 
 function incredibleSearch(event){

@@ -32,6 +32,8 @@ function populaPost(token){
 function populaBlog(post){
     //Aqui cria o post principal, que eu imagina que seja o último postado --------------------
     let containerPrincipal = document.getElementById('principal-new');
+    //deixa escondido
+    containerPrincipal.style.opacity = 0;
     //imagem principal
     let imgPrinc = document.createElement('img');
     imgPrinc.src = 'https://picsum.photos/796/416';
@@ -53,4 +55,10 @@ function populaBlog(post){
     divPrinc.appendChild(pPrinc);
     //append do div no container
     containerPrincipal.appendChild(divPrinc);
+
+    //Esconde loading
+    document.getElementById('loading-gif').style.display = 'none';
+
+    //mostra os elementos
+    containerPrincipal.style.opacity = 1;
 }
