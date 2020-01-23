@@ -236,6 +236,15 @@ table {
 	font-size: 18px;
 	font-weight: bold;
 }
+.loading-gif{
+	position: relative;
+    margin-left: 25%;
+}
+
+.opac-zero{
+	opacity: 0;
+}
+
 /* 
 font-family: 'Roboto Slab', serif;
 font-family: 'Poppins', sans-serif; */
