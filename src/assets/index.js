@@ -164,6 +164,7 @@ function trocaCategoria(event){
     
 }
 
+<<<<<<< HEAD
 async function enviarDados(event) {
   // Evita ação de submit
   event.preventDefault();
@@ -228,4 +229,8 @@ async function enviarDadosPraAvengers(nome, email, contexto) {
   };
 
   const response = await fetch(avengersURL, requestOptions);
+=======
+function submitLead(event){
+    console.log(event); 
+>>>>>>> master
 }
