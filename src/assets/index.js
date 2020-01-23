@@ -193,6 +193,25 @@ async function enviarDados(event) {
   await enviarDadosGama(inputNameValue, inputEmailValue);
 }
 
+async function enviarDadosGama(name, email) {
+  const body = new URLSearchParams({
+    'email': 'test@gmail.com',
+    'name': 'test test',
+    'debugMode': true
+  });
+
+  const requestOptions = {
+    body,
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    },
+    mode: 'cors'
+  };
+
+  const response = await fetch(gamaURL, requestOptions);
+}
+
 async function enviarDadosPraAvengers(nome, email, contexto) {
   const body = JSON.stringify({
     nome,
