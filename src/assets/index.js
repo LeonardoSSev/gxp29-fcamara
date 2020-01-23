@@ -229,5 +229,4 @@ async function enviarDadosPraAvengers(nome, email, contexto) {
   };
 
   const response = await fetch(avengersURL, requestOptions);
-  console.log(response);
 }
