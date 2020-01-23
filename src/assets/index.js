@@ -90,7 +90,7 @@ function populaBlog(result){
         //p
         let p = document.createElement('p');
         p.className = 'card-text';
-        p.innerText = element.corpo.substring(0, 100) + '...';
+        p.innerHTML = element.corpo.substring(0, 100) + '...';
         //h5
         let h5 = document.createElement('h5');
         h5.className = 'card-title';
