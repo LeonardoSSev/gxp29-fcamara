@@ -48,7 +48,7 @@ table {
 }
 
 .hero-bgi {
-	background-image: url("imgs/banner/header-bg.png");
+	background-image: url("imgs/banner/hero-bg.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -57,7 +57,7 @@ table {
 }
 
 .footer-bgi {
-	background-image: url("imgs/banner/header-bg.png");
+	background-image: url("imgs/banner/hero-bg.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
