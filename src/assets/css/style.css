@@ -222,6 +222,20 @@ table {
 	color: #fff !important;
 }
 
+.footer p {
+	font-size: 24px;
+	color: #fff;
+}
+
+.hero-logo {
+	height: inherit;
+    display: flex;
+    justify-content: space-around;
+	align-items: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+}
 .loading-gif{
 	position: relative;
     margin-left: 25%;
