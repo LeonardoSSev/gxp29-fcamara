@@ -135,11 +135,10 @@ function populaBlog(result){
 }
 
 function incredibleSearch(event){
-    console.log(event.target.value);
     let searched = arrPosts.filter((post) => {
         return post.titulo.includes(event.target.value);
     });
-    console.log(searched);
+
     limpaFeed();
 
    if(searched.length > 0){
@@ -155,8 +154,6 @@ function trocaCategoria(event){
     let listResultCategoria = arrPosts.filter((post) => {
         return post.keyWord === clicked;
     })
-
-    console.log(listResultCategoria);
 
     if(listResultCategoria.length > 0){
         populaBlog(listResultCategoria)
