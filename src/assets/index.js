@@ -192,3 +192,23 @@ async function enviarDados(event) {
   await enviarDadosPraAvengers(inputNameValue, inputEmailValue, inputContextValue);
   await enviarDadosGama(inputNameValue, inputEmailValue);
 }
+
+async function enviarDadosPraAvengers(nome, email, contexto) {
+  const body = JSON.stringify({
+    nome,
+    email,
+    contexto
+  });
+
+  const requestOptions = {
+    body,
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json; charset=UTF-8'
+    },
+    mode: 'cors'
+  };
+
+  const response = await fetch(avengersURL, requestOptions);
+  console.log(response);
+}
