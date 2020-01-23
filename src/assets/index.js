@@ -191,6 +191,8 @@ async function enviarDados(event) {
 
   await enviarDadosPraAvengers(inputNameValue, inputEmailValue, inputContextValue);
   await enviarDadosGama(inputNameValue, inputEmailValue);
+
+  window.alert("Obrigado por se inscrever! Logo você receberá a nossa Newsletter!");
 }
 
 async function enviarDadosGama(name, email) {
