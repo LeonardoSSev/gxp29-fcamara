@@ -36,9 +36,10 @@ function populaBlog(post){
     containerPrincipal.style.opacity = 0;
     //imagem principal
     let imgPrinc = document.createElement('img');
-    imgPrinc.src = 'https://picsum.photos/796/416';
+    imgPrinc.src = post.imgSrc;
     imgPrinc.className = 'img-fluid to-remove';
-    imgPrinc.alt = 'Responsive image';
+    imgPrinc.alt = post.imgAlt;
+    imgPrinc.title = post.imgTitle;
     //append no container 
     containerPrincipal.appendChild(imgPrinc);
     //h1 principal
