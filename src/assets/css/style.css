@@ -221,6 +221,21 @@ table {
 	background-color: #8a05be !important;
 	color: #fff !important;
 }
+
+.footer p {
+	font-size: 24px;
+	color: #fff;
+}
+
+.hero-logo {
+	height: inherit;
+    display: flex;
+    justify-content: space-around;
+	align-items: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+}
 /* 
 font-family: 'Roboto Slab', serif;
 font-family: 'Poppins', sans-serif; */
