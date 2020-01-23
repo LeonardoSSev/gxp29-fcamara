@@ -195,8 +195,8 @@ async function enviarDados(event) {
 
 async function enviarDadosGama(name, email) {
   const body = new URLSearchParams({
-    'email': 'test@gmail.com',
-    'name': 'test test',
+    'name': name,
+    'email': email,
     'debugMode': true
   });
 
