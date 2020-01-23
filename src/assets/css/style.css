@@ -221,6 +221,16 @@ table {
 	background-color: #8a05be !important;
 	color: #fff !important;
 }
+
+.loading-gif{
+	position: relative;
+    margin-left: 25%;
+}
+
+.opac-zero{
+	opacity: 0;
+}
+
 /* 
 font-family: 'Roboto Slab', serif;
 font-family: 'Poppins', sans-serif; */
