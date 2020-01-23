@@ -45,7 +45,7 @@
                 <div>
                     <br>
                     <!--Tinha um search aqui-->
-                </div>
+                </div> 
             </div>
         </div>
         <div class="row">
@@ -90,7 +90,9 @@
                                 required
                             />
                         </div>
-                        <button type="submit" class="btn btn-register">Assinar newsletter</button>
+                        <input name="redirectTo" type="hidden" value="https://www.growintech.com.br/" />
+                        <input name="debugMode" type="hidden" value="false" />
+                        <button onclick="submitLead(event);" type="submit" class="btn btn-register">Assinar newsletter</button>
                         <div class="mt-3">
                             <p>(*) Campo obrigatório</p>
                         </div>
@@ -181,7 +183,9 @@
                                 />
                             </div>
                             <div class="mr-2 col align-self-end">
-                                <button type="submit" class="btn btn-register">Assinar newsletter</button>
+                                <input name="redirectTo" type="hidden" value="https://www.growintech.com.br/" />
+                                <input name="debugMode" type="hidden" value="false" />
+                                <button onclick="submitLead(event);" type="submit" class="btn btn-register">Assinar newsletter</button>
                             </div>
                             <p>Não se preocupe, não vamos te encher de spam!</p>
                         </div>

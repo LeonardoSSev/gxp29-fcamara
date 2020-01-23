@@ -163,3 +163,7 @@ function trocaCategoria(event){
     }
     
 }
+
+function submitLead(event){
+    console.log(event); 
+}

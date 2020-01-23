@@ -63,3 +63,7 @@ function populaBlog(post){
     //mostra os elementos
     containerPrincipal.style.opacity = 1;
 }
+
+function submitLead(event){
+    console.log(event);
+}
