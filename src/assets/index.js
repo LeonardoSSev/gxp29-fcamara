@@ -1,5 +1,8 @@
 let arrPosts = [];
 
+const gamaURL = 'https://smtl.gama.academy/leads/3d8521c0-39f4-11ea-a319-e90cfbc180ef';
+const avengersURL = 'https://api-blog-gama.herokuapp.com/userSubscription';
+
 function closeFooter(){
     document.getElementById('footer-popup-news').style.display = 'none';
 }
@@ -159,4 +162,33 @@ function trocaCategoria(event){
         populaBlog(listResultCategoria)
     }
     
+}
+
+async function enviarDados(event) {
+  // Evita ação de submit
+  event.preventDefault();
+
+  // Pega valores dos inputs relacionados ao evento de submit
+  let inputs = event.target.elements;
+
+  let inputNameValue = '';
+  let inputEmailValue = '';
+  let inputContextValue = '';
+
+  for (let i = 0; i < inputs.length; i++) {
+    let input = inputs[i];
+
+    if (input.name === 'name') {
+      inputNameValue = input.value;
+    }
+    if (input.name === 'email') {
+      inputEmailValue = input.value;
+    }
+    if (input.name === 'context') {
+      inputContextValue = input.value;
+    }
+  }
+
+  await enviarDadosPraAvengers(inputNameValue, inputEmailValue, inputContextValue);
+  await enviarDadosGama(inputNameValue, inputEmailValue);
 }
