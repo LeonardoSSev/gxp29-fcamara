@@ -2,17 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156755842-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-156755842-1');
-    </script>
-
-    <!-- Fim Global site tag (gtag.js) - Google Analytics -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,34 +12,37 @@
     <title>Grow In Tech - Blog</title>
 </head>
 
-<body onload="RecuperPostagem();" style="background-color: #f5f5f5;">
-    <header class="hero-bgi row">
-        <div class="col-lg-12 hero-logo text-center">
-            <div style="height: inherit;">
-                <img src="assets/css/imgs/logo-gwit.svg" class="img-fluid" alt="Logo do Grow in Tech - Blog" title="Logo do Grow in Tech - Blog" style="height: inherit;">
-            </div>
-            <div>
-                <p>Transformação digital em marketing e vendas</p>
-            </div>
+<body onload="getPosts();" style="background-color: #f5f5f5;">
+    <header class="hero-bgi">
+        <div class="hero-text">
+            <!-- <img src="assets/css/imgs/logo-white.svg" class="img-fluid" alt="Responsive image"> -->
+            <p>Grow in Tech</p>
         </div>
     </header>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <ul class="categories col-12">
-                    <li><button onclick="voltar();" type="button" class="btn btn-light">Voltar</button></li>
-                </ul>
+                <nav class="navbar navbar-expand-lg navbar-light bg-transparent"
+                    style="display: flex; justify-content: space-between;">
+                    <ul class="categories col-12">
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Inovação</button></li>
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Auditoria</button></li>
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Ágil</button></li>
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Frameworks</button></li>
+                        <li><button onclick="trocaCategoria(event);" type="button" class="btn btn-light">Projetos</button></li>
+                    </ul>
+                </nav>
             </div>
             <div class="col-lg-4">
                 <div>
-                    <br>
-                    <!--Tinha um search aqui-->
-                </div> 
+                    <form class="form-inline my-3 my-lg1">
+                        <input class="form-control" onkeyup="incredibleSearch(event);" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-8">
-                <img class="loading-gif" id="loading-gif" src="assets\css\imgs\loading.gif" alt="carregando posts">
                 <div id="principal-new" class="row principal-post">
                     <!-- <img src="https://picsum.photos/796/416" class="img-fluid" alt="Responsive image">
                     <div class="principa-description">
@@ -58,11 +50,25 @@
                         <p>Carregando...</p>
                     </div> -->
                 </div>
+                <div id="other-cards" class="row mt-4">
+                    <!-- <div class="col-md-6 mb-4">
+                        <div class="card" style="width: 18rem; padding: 16px;">
+                            <img src="https://picsum.photos/358/245" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="primary">Continuar lendo...</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
             </div>
             <div class="col-lg-4">
                 <div class="card subscribe-card">
                     <h5>Inscreva-se em nossa newsletter</h5>
-                    <form method="POST" action="https://smtl.gama.academy/leads/3d8521c0-39f4-11ea-a319-e90cfbc180ef" class="px-4 py-3">
+                    <form class="px-4 py-3">
                         <div class="form-group">
                             <label for="inputName">*Nome:</label>
                             <input 
@@ -90,20 +96,23 @@
                                 required
                             />
                         </div>
-                        <input name="redirectTo" type="hidden" value="https://www.growintech.com.br/" />
-                        <input name="debugMode" type="hidden" value="false" />
-                        <button onclick="submitLead(event);" type="submit" class="btn btn-register">Assinar newsletter</button>
+                        <button type="submit" class="btn btn-register">Assinar newsletter</button>
                         <div class="mt-3">
                             <p>(*) Campo obrigatório</p>
                         </div>
                     </form>
                 </div>
-                <div class="mt-4">
+                <div class="mt-4 banner-column">
                     <div class="ebook-banner">
-                        <a href="#">
-                            <img src="assets/css/imgs/banner/banner-ebook.jpg" alt="capa do ebook">
-                        </a>
+                        <img src="assets/css/imgs/banner/capa-ebook2.png" alt="capa do ebook">
                     </div>
+                    <p class="ebook-press">
+                        A sua empresa está por dentro das novas regras de segurança e proteção de dados?
+                    </p>
+                    <p>
+                        Acabe com suas dúvidas de uma vez! Faça o download deste guia completo com tudo que você precisa saber
+                    </p>
+                    <button>Baixar eBook gratuito</button>
                 </div>
                 <div class="mt-4 editors-choice" style="padding: 20px;">
                     <h1>Escolha dos Editores</h1>
@@ -157,7 +166,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <form accept-charset="UTF-8" enctype="multipart/form-data" method="POST" action="https://smtl.gama.academy/leads/3d8521c0-39f4-11ea-a319-e90cfbc180ef">
+                    <form>
                         <div class="form-row">
                             <h1>Inscreva-se em nossa newsletter</h1>
                             <p>Fique por dentro das notícias mais recentes sobre  tecnologia, gestão e carreiras.</p>
@@ -183,9 +192,7 @@
                                 />
                             </div>
                             <div class="mr-2 col align-self-end">
-                                <input name="redirectTo" type="hidden" value="https://www.growintech.com.br/" />
-                                <input name="debugMode" type="hidden" value="false" />
-                                <button onclick="submitLead(event);" type="submit" class="btn btn-register">Assinar newsletter</button>
+                                <button type="submit" class="btn btn-register">Assinar newsletter</button>
                             </div>
                             <p>Não se preocupe, não vamos te encher de spam!</p>
                         </div>
@@ -200,13 +207,9 @@
             </div>
     </section>
     <footer class="footer footer-bgi">
-        <div class="">
-         <p>Siga a gente nas nossas redes sociais:</p>
-         <a href="http://facebook.com/growint3ch" target="_blank">
-             <img src="assets/css/imgs/facebook-icon.png" alt="icone do facebook" title="Siga para nossas redes sociais">
-         </a>
-        </div>
-     </footer>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore provident a consequuntur, necessitatibus
+        aperiam
+    </footer>
 </body>
-<script src="assets/post.js"></script>
+<script src="assets/css/index.js"></script>
 </html>
