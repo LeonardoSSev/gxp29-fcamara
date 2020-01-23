@@ -48,7 +48,8 @@ function populaBlog(result){
     let imgPrinc = document.createElement('img');
     imgPrinc.src = result[result.length - 1].imgSrc;
     imgPrinc.className = 'img-fluid to-remove';
-    imgPrinc.alt = 'Responsive image';
+    imgPrinc.alt = result[result.length - 1].imgAlt;
+    imgPrinc.title = result[result.length - 1].imgTitle;
     //append no container 
     containerPrincipal.appendChild(imgPrinc);
     //h1 principal
