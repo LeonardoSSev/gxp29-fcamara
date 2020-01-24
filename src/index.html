@@ -85,7 +85,7 @@
             <div class="col-lg-4">
                 <div class="card subscribe-card">
                     <h5>Inscreva-se em nossa newsletter</h5>
-                    <form class="px-4 py-3" onsubmit="enviarDados(event)">
+                    <form class="px-4 py-3" onsubmit="processarCadastro(event)">
                         <div class="form-group">
                             <input type="hidden" name="debugMode" value="true" />
                             <input type="hidden" name="context" value="Newsletter" />
@@ -182,7 +182,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <form onsubmit="enviarDados(event);">
+                    <form onsubmit="processarCadastro(event);">
                         <div class="form-row">
                             <h1>Inscreva-se em nossa newsletter</h1>
                             <p>Fique por dentro das notícias mais recentes sobre  tecnologia, gestão e carreiras.</p>
