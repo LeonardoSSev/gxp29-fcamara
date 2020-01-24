@@ -122,7 +122,7 @@ function populaBlog(result){
         //div 2
         let div2 = document.createElement('div');
         div2.className = 'card';
-        div2.style = 'width: 18rem; padding: 16px;';
+        div2.style = 'width: 18rem; padding: 16px; min-height: 30rem;';
         //append da img e da div1 na div2
         div2.appendChild(img);
         div2.appendChild(div1);
