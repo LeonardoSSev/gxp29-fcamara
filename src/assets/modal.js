@@ -1,6 +1,6 @@
 let modal = document.getElementById("myModal");
 
-let span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("avengers-modal-close")[0];
 
 function abrirTermos() {
   modal.style.display = "block";
