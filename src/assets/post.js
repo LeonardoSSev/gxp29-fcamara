@@ -29,7 +29,7 @@ function populaPost(token){
 
 }
 
-function populaBlogComPostPrincipal(post){
+function populaBlogComPostPrincipal(post) {
     //Aqui cria o post principal, que eu imagina que seja o último postado --------------------
     let containerPrincipal = document.getElementById('principal-new');
     //deixa escondido
@@ -62,4 +62,13 @@ function populaBlogComPostPrincipal(post){
 
     //mostra os elementos
     containerPrincipal.style.opacity = 1;
+
+    let metaDescription = document.createElement('meta');
+    metaDescription.setAttribute('name', 'description');
+    metaDescription.content = post.metaContent;
+    document.getElementsByTagName('head')[0].appendChild(metaDescription);
+
+    let metaTitle = document.createElement('title');
+    metaTitle.innerText = post.metaTitle;
+    document.getElementsByTagName('head')[0].appendChild(metaTitle);
 }
