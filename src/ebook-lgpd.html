@@ -23,7 +23,7 @@
     <title>Grow In Tech - Blog</title>
 </head>
 
-<body onload="RecuperPostagem();" style="background-color: #f5f5f5;">
+<body style="background-color: #f5f5f5;">
     <header class="hero-bgi">
         <div class="col-lg-12 hero-logo text-center">
             <div style="height: inherit;">
@@ -114,7 +114,8 @@
                                 <div class="col-lg-8">
                                     <form method="POST"
                                         action="https://smtl.gama.academy/leads/3d8521c0-39f4-11ea-a319-e90cfbc180ef"
-                                        onsubmit="enviarDados(event);">
+                                        onsubmit="enviarDados(event);
+                                        ">
                                         <div class="form-row">
                                             <p class="">
                                                 Preencha seus dados abaixo e receba este
@@ -143,6 +144,8 @@
                                                     title="Digite seu melhor email"
                                                     id="inputEmail"
                                                 />
+                                                <input name="redirectTo" type="hidden" value="https://www.growintech.com.br/" />
+                                                <input name="debugMode" type="hidden" value="false" />
                                             </div>
                                             <div class="mt-2 col-lg-12">
                                                 <input name="redirectTo" type="hidden"
@@ -241,5 +244,5 @@
         </div>
     </footer>
 </body>
-
+<script src="assets/ebook.js"></script>
 </html>
