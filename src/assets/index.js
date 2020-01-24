@@ -1,7 +1,13 @@
-let arrPosts = [];
-
 const gamaURL = 'https://smtl.gama.academy/leads/3d8521c0-39f4-11ea-a319-e90cfbc180ef';
 const avengersURL = 'https://api-blog-gama.herokuapp.com/userSubscription';
+
+let arrPosts = [];
+
+let inputNameValue = '';
+let inputEmailValue = '';
+let inputContextValue = '';
+
+let submitEvent;
 
 function closeFooter(){
     document.getElementById('footer-popup-news').style.display = 'none';
@@ -164,16 +170,16 @@ function trocaCategoria(event){
     
 }
 
-async function enviarDados(event) {
-  // Evita ação de submit
+function processarCadastro(event) {
   event.preventDefault();
+  
+  submitEvent = event;
+  abrirTermos();
+}
 
+async function enviarDados() {
   // Pega valores dos inputs relacionados ao evento de submit
-  let inputs = event.target.elements;
-
-  let inputNameValue = '';
-  let inputEmailValue = '';
-  let inputContextValue = '';
+  let inputs = submitEvent.target.elements;  
 
   for (let i = 0; i < inputs.length; i++) {
     let input = inputs[i];
