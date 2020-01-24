@@ -50,7 +50,7 @@ function populaBlog(post){
     pPrinc.innerHTML = post.corpo;
     //div
     let divPrinc = document.createElement('div');
-    divPrinc.className = 'principa-description to-remove';
+    divPrinc.className = 'principal-description to-remove';
     //append do h1 e p na div 
     divPrinc.appendChild(h1Princ);
     divPrinc.appendChild(pPrinc);

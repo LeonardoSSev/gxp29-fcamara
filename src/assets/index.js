@@ -65,7 +65,7 @@ function populaBlog(result){
     //div
     let divPrinc = document.createElement('div');
     divPrinc.style = 'width: 100%;'
-    divPrinc.className = 'principa-description to-remove';
+    divPrinc.className = 'principal-description to-remove';
     //a
     let aPrinc = document.createElement('a');
     aPrinc.href = 'post.html?tkn=' + result[result.length - 1]._id;

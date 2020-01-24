@@ -92,7 +92,7 @@ table {
 	background-color: #fff;
 }
 
-.principa-description {
+.principal-description {
 	padding: 30px;
 }
 
@@ -255,3 +255,31 @@ table {
 /* 
 font-family: 'Roboto Slab', serif;
 font-family: 'Poppins', sans-serif; */
+
+/* for ebook-lgpd.html */
+.ebook-form {
+	padding: 20px;
+	background-color: #e7e7ed;
+}
+
+.ebook-form p {
+	color: #8a05be;
+	font-weight: 600;
+}
+
+.ebook-form button {
+	background: #ffa200;
+	color: #fff;
+}
+
+.ebook-list ul {
+	font-size: 16px;
+	list-style: unset;
+	padding-left: 6rem;
+	font-family: 'Roboto Slab', serif;
+	font-weight: regular;
+}
+
+.ebook-list ul li {
+	margin: 10px 0;
+}
