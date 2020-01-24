@@ -6,6 +6,8 @@ let inputEmailValue = '';
 let inputContextValue = '';
 
 let submitEvent;
+
+let isEbook = false;
 function processarCadastro(event) {
   event.preventDefault();
   
@@ -34,9 +36,13 @@ async function enviarDados() {
   await enviarDadosPraAvengers(inputNameValue, inputEmailValue, inputContextValue);
   await enviarDadosGama(inputNameValue, inputEmailValue);
 
-  window.alert("Obrigado! O download de seu Ebook começará em breve!");
+  if (inputContextValue === 'Ebook') {
+    window.alert("Obrigado! O download de seu Ebook começará em breve!");
+    downloadEbook();
+    return;
+  }
 
-  downloadEbook();
+  window.alert("Obrigado por se inscrever! Logo você receberá a nossa Newsletter!");
 }
 
 async function enviarDadosGama(name, email) {
