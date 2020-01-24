@@ -53,3 +53,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.avengers-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 3px;
+  flex-flow: row;
+}
