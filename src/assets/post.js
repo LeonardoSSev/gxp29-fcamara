@@ -62,6 +62,15 @@ function populaBlog(post){
 
     //mostra os elementos
     containerPrincipal.style.opacity = 1;
+
+    let metaDescription = document.createElement('meta');
+    metaDescription.setAttribute('name', 'description');
+    metaDescription.content = post.metaContent;
+    document.getElementsByTagName('head')[0].appendChild(metaDescription);
+
+    let metaTitle = document.createElement('title');
+    metaTitle.innerText = post.metaTitle;
+    document.getElementsByTagName('head')[0].appendChild(metaTitle);
 }
 
 function submitLead(event){
