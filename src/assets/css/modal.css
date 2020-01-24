@@ -14,6 +14,10 @@
   text-justify: inter-word;
 }
 
+.avengers-modal-body > ol {
+  list-style: decimal;
+}
+
 /* Modal Content */
 .avengers-modal-content {
   position: relative;
