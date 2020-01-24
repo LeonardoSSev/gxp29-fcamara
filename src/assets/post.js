@@ -21,7 +21,7 @@ function populaPost(token){
     .then((response) => response.json())
     .then((result) => {
         arrPosts = result;
-        populaBlog(result);
+        populaBlogComPostPrincipal(result);
     })
     .catch((error) => {
         console.log(error);
@@ -29,7 +29,7 @@ function populaPost(token){
 
 }
 
-function populaBlog(post){
+function populaBlogComPostPrincipal(post){
     //Aqui cria o post principal, que eu imagina que seja o último postado --------------------
     let containerPrincipal = document.getElementById('principal-new');
     //deixa escondido
@@ -62,8 +62,4 @@ function populaBlog(post){
 
     //mostra os elementos
     containerPrincipal.style.opacity = 1;
-}
-
-function submitLead(event){
-    console.log(event);
 }
